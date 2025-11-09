@@ -159,7 +159,7 @@ export default function ATKMinimalShop() {
 
   const goWhatsApp = () => {
     const text = buildWhatsAppText();
-    const url = `https://wa.me/6285156035296?text=${encodeURIComponent(text)}`; // tambahkan nomor: wa.me/628xxxxxxxxx
+    const url = `https://wa.me/6285183041716?text=${encodeURIComponent(text)}`; // tambahkan nomor: wa.me/628xxxxxxxxx
     window.open(url, "_blank");
   };
   
