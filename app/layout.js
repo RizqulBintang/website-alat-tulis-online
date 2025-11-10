@@ -1,4 +1,6 @@
 import './globals.css';
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export const metadata = { title: 'Toko Alat Tulis Online', description: 'Toko Alat Tulis - Next.js' };
 
@@ -7,6 +9,8 @@ export default function RootLayout({ children }) {
     <html lang="id">
       <body className="min-h-screen bg-white text-slate-900 antialiased">
         {children}
+		<Analytics />
+		<SpeedInsights />
       </body>
     </html>
   );
