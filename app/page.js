@@ -45,24 +45,21 @@ const fmtIDR = (n) => new Intl.NumberFormat("id-ID", { style: "currency", curren
 
 // Daftar produk (kamu bisa tambah, ganti, atau hapus item disini)
 const PRODUCTS = [
-  { id: "pen-gel-black", name: "Pulpen Hitam", price: 8000, category: "Pulpen", desc: "Tinta pekat, cepat kering, nyaman dipakai harian.", img: "/img/pulpenhitam.jpeg" },
-  { id: "notebook-a5", name: "Kertas A4 1 rim", price: 22000, category: "Buku Catatan", desc: "Kertas halus, cocok untuk kuliah & kantor.", img: "/img/kertasa4.jpg" },
-  { id: "penggaris-30", name: "Penggaris Besi 30cm", price: 9000, category: "Penggaris", desc: "Bahan kuat, skala jelas.", img: "/img/penggarisbesi.jpg" },
-  { id: "stabilo-pastel", name: "Stabilo Pastel (Set 6)", price: 45000, category: "Highlighter", desc: "Warna lembut, tidak tembus kertas.", img: "/img/stabilo.jpg" },
-  { id: "pen-gel-blue", name: "Pulpen Biru", price: 8000, category: "Pulpen", desc: "Flow tinta stabil, nib halus.", img: "/img/pulpenbiru.jpg" },
-  { id: "notebook-spiral", name: "Notebook Spiral B5", price: 28000, category: "Buku Catatan", desc: "Mudah dibuka rata, cocok untuk sketsa.", img: "/img/notebook.jpg" },
-  { id: "penggaris-lentur", name: "Penggaris Lentur 20cm", price: 7000, category: "Penggaris", desc: "Tidak mudah patah, fleksibel.", img: "/img/penggarislentur.jpg" },
-  { id: "sticky-notes", name: "Sticky Notes 3x3", price: 15000, category: "Aksesoris", desc: "Tempel kuat, lepas tanpa bekas.", img: "/img/stickynote.jpg" },
+  { id: "jam-dinding", name: "Jam Dinding", price: 8000, category: "Stik Eskrim", desc: "Jam dinding yang terbuat dari stik eskrim.", img: "/img/jam-dinding.webp" },
+  { id: "temmpat-pensil", name: "Tempat Pensil", price: 22000, category: "Kaleng", desc: "Tempat Pensil yang terbuat dari Botol Kaleng.", img: "/img/tempat-pensil.webp" },
+  { id: "bunga-botol-plastik", name: "Bunga Hias", price: 9000, category: "Gelas Plastik", desc: "Bunga yang terbuat dari botol plastik.", img: "/img/bunga.jpg" },
+  { id: "tas-tutup-botol", name: "Tas Perempuan", price: 45000, category: "Tutup Botol", desc: "Tas yang terbuat dari tutup botol.", img: "/img/tas-tutup-botol.webp" },
+  { id: "mangkok-koran", name: "Mangkok", price: 8000, category: "Koran", desc: "Mangkok yang terbuat dari koran.", img: "/img/mangkok-koran.webp" },
 ];
 
 // Kategori filter
 const CATEGORIES = [
   { label: "Semua", value: "all" },
-  { label: "Pulpen", value: "Pulpen", icon: PenLine },
-  { label: "Buku Catatan", value: "Buku Catatan", icon: NotebookPen },
-  { label: "Penggaris", value: "Penggaris", icon: Ruler },
-  { label: "Highlighter", value: "Highlighter", icon: Highlighter },
-  { label: "Aksesoris", value: "Aksesoris" },
+  { label: "Stik Eskrim", value: "Stik Eskrim" },
+  { label: "Kaleng", value: "Kaleng" },
+  { label: "Tutup Botol", value: "Tutup Botol" },
+  { label: "Koran", value: "Koran" },
+  { label: "Gelas Plastik", value: "Gelas Plastik" },
 ];
 
 // --- Helper pure function untuk menyusun teks WhatsApp (agar mudah dites)
@@ -178,7 +175,7 @@ export default function ATKMinimalShop() {
         <div className="max-w-7xl mx-auto px-4 py-3 flex items-center gap-3">
           <motion.div initial={{ opacity: 0, y: -8 }} animate={{ opacity: 1, y: 0 }} className="flex items-center gap-2">
             <div className="h-8 w-8 rounded-xl bg-gradient-to-br from-slate-900 to-slate-600" />
-            <span className="font-semibold tracking-tight">Toko Alat Tulis Online</span>
+            <span className="font-semibold tracking-tight">Kerajinan Tangan</span>
           </motion.div>
 
           {/* Kolom Search (desktop) */}
@@ -252,8 +249,8 @@ export default function ATKMinimalShop() {
       <section className="max-w-7xl mx-auto px-4 py-10">
         <div className="grid md:grid-cols-2 gap-6 items-center">
           <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.05 }}>
-            <h1 className="text-3xl md:text-4xl font-bold tracking-tight leading-tight">Menyediakan Berbagai Alat Tulis untuk Pelajar, Mahasiswa & Pegawai</h1>
-            <p className="mt-3 text-slate-600">Pilihan produk esensial, desain simpel, harga bersahabat. Kirim seluruh Indonesia.</p>
+            <h1 className="text-3xl md:text-4xl font-bold tracking-tight leading-tight">Kerajinan Tangan Terbuat Dari Bahan Bekas</h1>
+            <p className="mt-3 text-slate-600">Produk kerajinan tangan dengan desain simpel dan harga bersahabat. Kirim seluruh Indonesia.</p>
             <div className="mt-5 flex flex-wrap gap-2">
               {CATEGORIES.map((c) => (
                 <Button
@@ -411,7 +408,7 @@ export default function ATKMinimalShop() {
       {/* FOOTER */}
       <footer className="border-t border-slate-200 py-8 mt-6">
         <div className="max-w-7xl mx-auto px-4 text-sm text-slate-500 flex flex-col sm:flex-row gap-2 sm:gap-4 justify-between">
-          <span>© {new Date().getFullYear()} ATK Minimal. Semua hak cipta dilindungi.</span>
+          <span>© {new Date().getFullYear()} Faiz. Semua hak cipta dilindungi.</span>
           <div className="flex gap-4">
             <a className="hover:underline" href="#">Kebijakan Privasi</a>
             <a className="hover:underline" href="#">Syarat & Ketentuan</a>
