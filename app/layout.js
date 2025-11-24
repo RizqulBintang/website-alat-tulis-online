@@ -2,7 +2,7 @@ import './globals.css';
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
-export const metadata = { title: 'Toko Alat Tulis Online', description: 'Toko Alat Tulis - Next.js' };
+export const metadata = { title: 'Kerajinan Tangan', description: 'Kerajinan Tangan - Next.js' };
 
 export default function RootLayout({ children }) {
   return (
